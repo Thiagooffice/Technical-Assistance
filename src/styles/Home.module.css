@@ -1,0 +1,156 @@
+.header{
+  top: 0;
+  background-color: #2E2E2E;
+  height:80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+}
+.containerHeader{
+  background-color: #2E2E2E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 93%;
+
+}
+.logo{
+  width: 60px;
+  height: 20px;
+  background-color: purple;
+}
+.navBar{
+  background-color: #2E2E2E;
+
+}
+.listaHeader{
+  display: flex;
+  list-style: none;
+  
+}
+.linkitem{
+  position: relative;
+  color: #ffffff;
+  font-size: 12px;
+  margin-right: 14px;
+  font-family: sans-serif;
+  color: #b6b6b6;
+  transition: all 0.8s;
+  padding-bottom: 2px;
+}
+.linkitem:hover{
+  color:#008DD0 ;
+}
+.linkitem::after {
+  content: " ";
+  width: 0%;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  font-size: 18px;
+}
+.linkitem:hover::after{
+   width: 100%;
+   background-color: #008DD0;
+}
+.backgroundImage{
+  background-image: url('../assets/consertApple.jpg');
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.solutions{
+  text-align: center;
+  padding-top: 20vh;
+  font-size: 65px;
+  text-shadow: 0px 0px 13px #f2fbff;
+  line-height: 68px;
+  color: #1d07e4;
+  font-family: sans-serif;
+  margin-bottom: -44px;
+}
+.dispositivos{
+  text-align: center;
+  font-weight: 500;
+  font-size: 65px;
+  text-shadow: 0px 0px 10px #f2fbff;
+  color: #1d07e4;
+  font-family: sans-serif;
+}
+
+.containerMonitor{
+  width: 100%;
+  height: 100vh;
+}
+.monitor{
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  background-color: red;
+}
+.ourServices{
+  margin-top: 470px;
+  background-color: red;
+  width: 100%;
+  height: 100vh;
+}
+.titleOurServices{
+  font-size: 36px;
+  line-height: 48px;
+  color: #222222;
+  font-family: sans-serif;
+  text-align: center;
+}
+.lineOurServices{
+  width: 600px;
+  height: 1px;
+  background-color: #222222;
+  opacity: 0.9;
+  margin: 0 auto;
+}
+.allCards{
+  margin: 20px auto;
+  background-color: blue;
+  width: 95%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.infoServices{
+  background-color: pink;
+  height: 600px;
+  width: 100%;
+  display: flex;
+}
+
+.leftContainerImgCell{
+  background-color: blue;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightContainerButtonsItems{
+    background-color: aqua;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerButtonsServices{
+  background-color: purple;
+  height: 87%;
+  width: 88%;
+}
