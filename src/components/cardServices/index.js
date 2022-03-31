@@ -8,9 +8,7 @@ export default function CardServices({ titulo, descricao }) {
     <div className={styles.containerCard}>
         <div className={styles.imgToll}>
             <div className={styles.circleImgTools}>
-                    <BsTools style={{
-                        color: { }
-                    }}  size={45}  />
+                    <BsTools />
             </div>
         </div>
         <div className={styles.titleDescrition}>

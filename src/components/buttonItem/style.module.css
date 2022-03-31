@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+.showNo {
+    height: 60px;
+    transition: height 0.8s;
+}
+
+.showAll  {
+    max-height: 100%;
+    transition: height 0.8s;
+}
+
+.showDescription {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 60px;
+    max-width: 500px;
+    border: 1px solid rgb(212, 212, 212);
+    background: rgb(236, 235, 235);
+    align-items: center;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+.showDescription:hover {
+    background: #1697d4;
+}
+
+.showDescription svg {
+    font-size: 2.4rem;
+    color: #fff;
+    padding-top: 1px;
+    z-index: 10;
+}
+
+.showDescription:hover  svg {
+    color: #1697d4;
+}
+
+.showDescription:hover .boxIcon {
+    background: #fff;
+}
+
+.showDescription p {
+    padding-left: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.showDescription:hover p {
+    color: #fff;
+}
+
+.boxIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1697d4;
+    height: 60px;
+    width: 60px;
+    border-radius: 200px;
+    transition: 1s;
+}
+
+.textDescription {
+    font-weight: 800;
+    z-index: 1;
+    font-size: 0.9rem;
+    width: 90%;
+}
+
+.textDescriptionOff {
+    opacity: 0;
+    margin-right: 500px;
+    transition: margin-right 0.5s;
+}
+
+.textDescriptionOn {
+    transition: margin-right 0.5s;
+    margin-left: 40px;
+    margin-right: 0px;
+}
+
+@media only screen and (max-width: 500px) {
+    .showDescription{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .showDescription p {
+        font-size: 0.9rem;
+    }
+
+    .textDescriptionOn {
+        width: 95%;
+        margin-left: 1rem;
+    }
+}
+
