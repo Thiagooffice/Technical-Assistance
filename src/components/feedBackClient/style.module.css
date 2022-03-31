@@ -1,0 +1,49 @@
+.feedBackClient {
+    height: 220px;
+    width: 300px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+
+    flex: none;
+}
+
+.feedBackClient span {
+    font-weight: 900;
+    line-height: 10px;
+}
+
+.topFeedBack {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0px 15px;
+    background: #f9f9f9;
+    border-bottom: rgba(0, 0, 0, 0.35) 1px solid;
+    border-radius: 20px;
+}
+
+.dataClient {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 5px;
+}
+
+.textDataClient {
+    padding-right: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.fotoClient {
+    background: gray;
+    height: 60%;
+    width: 17%;
+    border-radius: 100px;
+}
