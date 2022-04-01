@@ -23,7 +23,7 @@ export default function ButtonItem({ titulo, descricao }) {
                 </div>
                 <p>{titulo}</p>
             </div>
-            <div className={`${styles.textDescription} ${description ? styles.textDescriptionOff : styles.textDescriptionOn} `}>
+            <div className={`${styles.textDescription} ${description ? styles.textDescriptionOn : styles.textDescriptionOff} `}>
                 <span>{descricao}</span>
             </div>
         </div>

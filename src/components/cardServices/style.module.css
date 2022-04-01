@@ -1,7 +1,8 @@
 .containerCard{
     width: 400px;
-    height: 150px;
+    height: 100%;
     display: flex;
+    align-items: center;
     margin-bottom: 10px;
     transition: 1s;
 }
@@ -14,7 +15,7 @@
 }
 .circleImgTools{
     border-radius: 50%;
-    border: 2px solid #008CCF;
+    border: 2px solid #e8541d;
     width: 70px;
     height: 70px;
     display: flex;
@@ -26,11 +27,11 @@
 
 .circleImgTools svg {
     font-size: 2rem;
-    color: #008CCF;
+    color: #e8541d;
 }
 
 .containerCard:hover .circleImgTools {
-    background-color: #008CCF;
+    background-color: #e8541d;
 }
 
 .containerCard:hover .circleImgTools svg {
