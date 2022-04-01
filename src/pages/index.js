@@ -10,33 +10,38 @@ import FeedBackClient from '../components/feedBackClient'
 import fotoContato from '../assets/fotoContato.svg'
 import email from '../assets/email.svg'
 import fotoHome from '../assets/fotoHome.svg'
+import capaHome from '../assets/capaHome.jpg'
 
-import { IoIosArrowBack, IoIosArrowForward, IoIosPhonePortrait, IoMdMail, IoMdMap } from 'react-icons/io'
+import { IoIosArrowBack, IoIosArrowForward, IoIosPhonePortrait, IoMdMail, IoMdMap, IoIosMenu } from 'react-icons/io'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
-import React, { useRef } from 'react';
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 2500, min: 1024 },
-    items: 3,
-    slidesToSlide: 3,
-    partialVisibilityGutter: 40,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1,
-  },
-};
+import React, { useRef, useState } from 'react';
 
 export default function Home() {
+
+  const [hamburguer, setHamburguer] = useState(false)
+
+
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 2500, min: 1024 },
+      items: 3,
+      slidesToSlide: 3,
+      partialVisibilityGutter: 40,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+  };
 
   const feedbacks = useRef()
 
@@ -52,7 +57,7 @@ export default function Home() {
 
   return (
     <>
-      <header id='#header' className={styles.header} >
+      <header id='#header' className={styles.header}>
         <div className={styles.containerHeader}>
           <div className={styles.logo}></div>
           <nav className={styles.navBar}>
@@ -66,17 +71,34 @@ export default function Home() {
               <li className={styles.itemListHeader}><a className={styles.linkitem} href="">CONTATOS</a></li>
             </ul>
           </nav>
-
+          <div className={styles.menuHamburguer} onClick={() => setHamburguer(!hamburguer)}>
+            <IoIosMenu />
+            {hamburguer && (
+              <nav className={styles.navHamburguer}>
+                <ul className={styles.listaHamburguer}>
+                  <li><a>HOME</a></li>
+                  <li><a>SERVIÇOS</a></li>
+                  <li><a>DÚVIDAS</a></li>
+                  <li><a>REDES SOCIAIS</a></li>
+                  <li><a>COLETA E ENTREGA</a></li>
+                  <li><a>SOBRE NÓS</a></li>
+                  <li><a>CONTATOS</a></li>
+                </ul>
+              </nav>)}
+          </div>
         </div>
       </header>
 
-      <div className={styles.backgroundImage}>
-        <div className={styles.titleHome}>
-          <h1>Solução Completa</h1>
-          <h3>iPhone, iPad, iMac e Macbook</h3>
-        </div>
-        <div className={styles.fotoHome}>
-          <Image src={fotoHome} width={300} />
+      <div className={styles.backgroundHome}>
+        <div className={styles.opacityBackground}></div>
+        <div className={styles.flexHome}>
+          <div className={styles.titleHome}>
+            <h1>Solução Completa</h1>
+            <h3>iPhone, iPad, iMac e Macbook</h3>
+          </div>
+          <div className={styles.fotoHome}>
+            <Image src={fotoHome} width={300} />
+          </div>
         </div>
       </div>
 
