@@ -18,6 +18,54 @@
   justify-content: space-between;
   width: 93%;
 }
+
+.menuHamburguer {
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.5s;
+  cursor: pointer;
+  display: none;
+}
+
+.menuHamburguer svg {
+  transition: 0.5s;
+}
+
+.menuHamburguer svg:hover {
+  color: #1697d4;
+}
+
+.navHamburguer{
+  position: fixed;
+  width: 100vw;
+  float: left;
+  top: 80px;
+  left: 0px;
+  background: #2E2E2E;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.navHamburguer li {
+  list-style: none;
+  text-decoration: none;
+  height: 30px;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.navHamburguer li:hover {
+  color: #1697d4;
+}
+
 .logo{
   width: 60px;
   height: 20px;
@@ -86,8 +134,15 @@
    background-color: #008DD0;
 }
 
-.backgroundImage{
-  background: #000;
+.backgroundHome {
+  background: url(../assets/capaHome.jpg) no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 60vh;
+  opacity: 0.5;
+}
+
+.flexHome{
   width: 100vw;
   height: 70vh;
   background-size: cover;
@@ -95,6 +150,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .titleHome {
@@ -542,7 +598,7 @@
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 800px) {
   .rightContainerButtonsItems {
     width: 80%;
   }
@@ -578,6 +634,29 @@
   }
   .buttonContato {
     width: 300px;
+  }
+
+  .listaHeader {
+    display: none;
+  }
+
+  .menuHamburguer {
+    display: flex;
+    margin-right: 1rem;
+  }
+
+  .listaHeader {
+    width: 100%;
+    margin: 0;
+  }
+  .backgroundImage{
+    justify-content: center;
+    gap:2rem;
+  }
+  
+  .titleHome {
+    color: #fff;
+    font-size: 1.5rem;
   }
 }
 
