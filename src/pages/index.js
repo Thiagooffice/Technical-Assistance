@@ -7,10 +7,9 @@ import ImgIphones from '../assets/iphones.jpg'
 import ButtonItem from '../components/buttonItem'
 import DataItem from '../components/dataItem'
 import FeedBackClient from '../components/feedBackClient'
-import fotoContato from '../assets/fotoContato.svg'
-import email from '../assets/email.svg'
-import fotoHome from '../assets/fotoHome.svg'
-import capaHome from '../assets/capaHome.jpg'
+import socialOrange from '../assets/socialOrange.svg'
+import emailOrange from '../assets/emailOrange.svg'
+import face from '../assets/face.png'
 
 import { IoIosArrowBack, IoIosArrowForward, IoIosPhonePortrait, IoMdMail, IoMdMap, IoIosMenu } from 'react-icons/io'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -21,8 +20,6 @@ import React, { useRef, useState } from 'react';
 export default function Home() {
 
   const [hamburguer, setHamburguer] = useState(false)
-
-
 
   const responsive = {
     desktop: {
@@ -57,52 +54,70 @@ export default function Home() {
 
   return (
     <>
-      <header id='#header' className={styles.header}>
+      <header className={styles.header}>
         <div className={styles.containerHeader}>
           <div className={styles.logo}></div>
           <nav className={styles.navBar}>
             <ul className={styles.listaHeader}>
-              <li className={styles.itemListHeader}><a className={styles.linkitem} href="header">HOME</a></li>
-              <li className={styles.itemListHeader}><a className={styles.linkitem} href="">SERVIÇOS</a></li>
-              <li className={styles.itemListHeader}><a className={styles.linkitem} href="">DÚVIDAS</a></li>
-              <li className={styles.itemListHeader}><a className={styles.linkitem} href="">REDES SOCIAIS</a></li>
-              <li className={styles.itemListHeader}><a className={styles.linkitem} href="">COLETA E ENTREGA</a></li>
-              <li className={styles.itemListHeader}><a className={styles.linkitem} href="">SOBRE NÓS</a></li>
-              <li className={styles.itemListHeader}><a className={styles.linkitem} href="">CONTATOS</a></li>
+              <li className={styles.itemListHeader}><a className={styles.linkitem} href="#home">HOME</a></li>
+              <li className={styles.itemListHeader}><a className={styles.linkitem} href="#serviços">SERVIÇOS</a></li>
+              <li className={styles.itemListHeader}><a className={styles.linkitem} href="#duvidas">DÚVIDAS</a></li>
+              <li className={styles.itemListHeader}><a className={styles.linkitem} href="#redes">REDES SOCIAIS</a></li>
+              <li className={styles.itemListHeader}><a className={styles.linkitem} href="#coleta">COLETA E ENTREGA</a></li>
+              <li className={styles.itemListHeader}><a className={styles.linkitem} href="#feedbacks">FEEDBACKS</a></li>
+              <li className={styles.itemListHeader}><a className={styles.linkitem} href="#contato">CONTATOS</a></li>
             </ul>
           </nav>
-          <div className={styles.menuHamburguer} onClick={() => setHamburguer(!hamburguer)}>
-            <IoIosMenu />
-            {hamburguer && (
-              <nav className={styles.navHamburguer}>
-                <ul className={styles.listaHamburguer}>
-                  <li><a>HOME</a></li>
-                  <li><a>SERVIÇOS</a></li>
-                  <li><a>DÚVIDAS</a></li>
-                  <li><a>REDES SOCIAIS</a></li>
-                  <li><a>COLETA E ENTREGA</a></li>
-                  <li><a>SOBRE NÓS</a></li>
-                  <li><a>CONTATOS</a></li>
-                </ul>
-              </nav>)}
+          <div className={styles.menuHamburguer}>
+            <IoIosMenu onClick={() => setHamburguer(!hamburguer)} />
+            <nav className={`${styles.navHamburguer} ${hamburguer ? styles.showHamburguer : styles.dontShowHamburguer} `}>
+              <ul className={styles.listaHamburguer}>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#serviços">SERVIÇOS</a></li>
+                <li><a href="#duvidas">DÚVIDAS</a></li>
+                <li><a href="#redes">REDES SOCIAIS</a></li>
+                <li><a href="#coleta">COLETA E ENTREGA</a></li>
+                <li><a href="#feedbacks">FEEDBACKS</a></li>
+                <li><a href="#contato">CONTATOS</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </header>
 
-      <div className={styles.backgroundHome}>
+      <div className={styles.backgroundHome} id="home">
         <div className={styles.opacityBackground}></div>
         <div className={styles.flexHome}>
           <div className={styles.titleHome}>
             <h1>Solução Completa</h1>
             <h3>iPhone, iPad, iMac e Macbook</h3>
           </div>
-          <div className={styles.fotoHome}>
-            <Image src={fotoHome} width={300} />
-          </div>
         </div>
       </div>
 
-      <div className={styles.ourServices}>
+      <div className={styles.sectionCarousel}>
+        <div className={styles.boxCarouselMain}>
+          <Carousel responsive={responsive}
+            partialVisible={true}
+            autoplay={true}
+            className="containerCarousel" >
+            <div>
+              <Image src={ImgIphones} />
+              <p className="legend">Iphones</p>
+            </div>
+            <div>
+              <Image src={ImgIphones} />
+              <p className="legend">MacBooks</p>
+            </div>
+            <div>
+              <Image src={ImgIphones} />
+              <p className="legend" id="serviços">Androids</p>
+            </div>
+          </Carousel>
+        </div>
+      </div >
+
+      <div className={styles.ourServices} id="serviços">
         <h1 className={styles.titleOurServices}>Nossos principais serviços</h1>
         <div className={styles.lineOurServices}></div>
         <div className={styles.allCards}>
@@ -133,29 +148,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.sectionCarousel}>
-        <div className={styles.boxCarouselMain}>
-          <Carousel responsive={responsive}
-            partialVisible={true}
-            autoplay={true}
-            className="containerCarousel" >
-            <div>
-              <Image src={ImgIphones} />
-              <p className="legend">Legend 1</p>
-            </div>
-            <div>
-              <Image src={ImgIphones} />
-              <p className="legend">Legend 2</p>
-            </div>
-            <div>
-              <Image src={ImgIphones} />
-              <p className="legend">Legend 3</p>
-            </div>
-          </Carousel>
-        </div>
-      </div>
-
-      <div className={styles.infoServices}>
+      <div className={styles.infoServices} id="duvidas">
 
         <div className={styles.leftContainerImgCell}>
           <Image src={ImgCell} alt="Image Cell" />
@@ -189,11 +182,11 @@ export default function Home() {
         <div className={styles.textInformationRepairs}>
           <h1>São muitos anos em reparos de smartphone</h1>
           <h2>Venha conhecer nossa loja e surpreenda-se com nossos serviços.</h2>
-          <div className={styles.datasInformation}>
+          <div className={styles.datasInformation} id="redes">
             <DataItem numero="1002" subtitulo="Satisfação" />
             <DataItem numero="102" subtitulo="Xiaomi" />
             <DataItem numero="12" subtitulo="Android" />
-            <DataItem numero="22" subtitulo="Apple" />
+            <DataItem numero="22" subtitulo="Apple"/>
           </div>
         </div>
       </div>
@@ -201,11 +194,14 @@ export default function Home() {
       <div className={styles.socialMedia}>
         <h1 className={styles.titleOurServices}>Redes Sociais</h1>
         <div className={styles.lineOurServices}></div>
-        <div className={styles.boxSocialMedia}>
-        </div>
+        <a href="http://www.facebook.com" target="_blank">
+          <div className={styles.boxSocialMedia} >
+            <Image src={face} alt="Foto Face" width={1000} />
+          </div>
+        </a>
       </div>
 
-      <div className={styles.placesDelivery}>
+      <div className={styles.placesDelivery} id="coleta">
         <h1 className={styles.titleOurServices}>Coletamos e entregamos o seu iPhone</h1>
         <div className={styles.lineOurServices}></div>
         <div className={styles.boxPlacesDelivery}>
@@ -265,7 +261,7 @@ export default function Home() {
 
       <div className={styles.containerInfoServices}>
         <div className={styles.textInfoServices}>
-          <h1>Serviços entregues em até 40 minutos</h1>
+          <h1 id="feedbacks">Serviços entregues em até 40 minutos</h1>
           <p>Entendemos que você não pode ficar sem seu iPhone...</p>
         </div>
       </div>
@@ -278,52 +274,26 @@ export default function Home() {
             <Carousel responsive={responsive}
               partialVisible={true}
               autoplay={true}
-              className="containerCarousel" >
+              className={styles.containerCarousel}
+ >
               <div className={styles.feedbacksSlide}>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
+                <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
               </div>
               <div className={styles.feedbacksSlide}>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
-              </div>
-              <div className={styles.feedbacksSlide}>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
-                <div>
-                  <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-                </div>
+                <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
               </div>
             </Carousel>
           </div>
         </div>
       </div>
 
-      <div className={styles.containerContato}>
+      <div className={styles.containerContato} id="contato">
         <div className={styles.boxContato}>
           <form className={styles.formProfile}>
             <div className={styles.formContatoLeft}>
               <h1>CONTATE-NOS</h1>
               <div className={styles.fotoContateNos}>
-                <Image src={fotoContato} height={160} />
+                <Image src={socialOrange} height={160} />
               </div>
               <div className={styles.boxTextsFormContatoLeft}>
                 <p><IoIosPhonePortrait />  +55 71 34933508 </p>
@@ -332,7 +302,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.formContatoRight}>
-              <Image src={email} height={140} />
+              <Image src={emailOrange} height={140} />
               <input type="text" name="name" className={styles.field} placeholder="Nome" />
               <input type="text" name="email" className={styles.field} placeholder="Email" />
               <input type="text" name="number" className={styles.field} placeholder="Número" />
