@@ -10,6 +10,7 @@ import FeedBackClient from '../components/feedBackClient'
 import socialOrange from '../assets/socialOrange.svg'
 import emailOrange from '../assets/emailOrange.svg'
 import face from '../assets/face.png'
+import Logo from '../assets/logo.png'
 
 import { IoIosArrowBack, IoIosArrowForward, IoIosPhonePortrait, IoMdMail, IoMdMap, IoIosMenu } from 'react-icons/io'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -52,11 +53,23 @@ export default function Home() {
     feedbacks.current.scrollLeft -= feedbacks.current.offsetWidth
   }
 
+  const maskPhone = (value) => {
+    return value
+      .replace(/\D/g, "")
+      .replace(/(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d)/, "$1-$2")
+      .replace(/(-\d{4})(\d+?)$/, "$1");
+  };
+
+  const [phone, setPhone] = useState("");
+
   return (
     <>
       <header className={styles.header}>
         <div className={styles.containerHeader}>
-          <div className={styles.logo}></div>
+          <div className={styles.logo}>
+            <Image src={Logo} width={60} height={75} alt="Logo Image" />
+          </div>
           <nav className={styles.navBar}>
             <ul className={styles.listaHeader}>
               <li className={styles.itemListHeader}><a className={styles.linkitem} href="#home">HOME</a></li>
@@ -102,15 +115,15 @@ export default function Home() {
             autoplay={true}
             className="containerCarousel" >
             <div>
-              <Image src={ImgIphones} />
+              <Image src={ImgIphones} alt="Image Iphones" />
               <p className="legend">Iphones</p>
             </div>
             <div>
-              <Image src={ImgIphones} />
+              <Image src={ImgIphones} alt="Image MacBooks"/>
               <p className="legend">MacBooks</p>
             </div>
             <div>
-              <Image src={ImgIphones} />
+              <Image src={ImgIphones} alt="Image Androids"/>
               <p className="legend" id="serviços">Androids</p>
             </div>
           </Carousel>
@@ -194,7 +207,7 @@ export default function Home() {
       <div className={styles.socialMedia}>
         <h1 className={styles.titleOurServices}>Redes Sociais</h1>
         <div className={styles.lineOurServices}></div>
-        <a href="http://www.facebook.com" target="_blank">
+        <a href="http://www.facebook.com">
           <div className={styles.boxSocialMedia} >
             <Image src={face} alt="Foto Face" width={1000} />
           </div>
@@ -293,7 +306,7 @@ export default function Home() {
             <div className={styles.formContatoLeft}>
               <h1>CONTATE-NOS</h1>
               <div className={styles.fotoContateNos}>
-                <Image src={socialOrange} height={160} />
+                <Image src={socialOrange} height={160} alt="Social Image" />
               </div>
               <div className={styles.boxTextsFormContatoLeft}>
                 <p><IoIosPhonePortrait />  +55 71 34933508 </p>
@@ -301,14 +314,20 @@ export default function Home() {
                 <p><IoMdMap />  Rua Leonor Calmon, 256 - Candeal, Salvador - BA, Centro Médico Christian Barnard, Loja 29 </p>
               </div>
             </div>
-            <div className={styles.formContatoRight}>
+            <form className={styles.formContatoRight}>
               <Image src={emailOrange} height={140} />
               <input type="text" name="name" className={styles.field} placeholder="Nome" />
-              <input type="text" name="email" className={styles.field} placeholder="Email" />
-              <input type="text" name="number" className={styles.field} placeholder="Número" />
+              <input type="email" name="email" className={styles.field} placeholder="Email" />
+              <input  
+              value={phone} 
+              name="number" 
+              className={styles.field} 
+              placeholder="Número" 
+              onChange={(e) => setPhone(maskPhone(e.target.value))}
+              />
               <input type="textarea" name="serviço" className={styles.textArea} placeholder="Deixe uma mensagem..." />
               <button type="submit" className={styles.buttonContato}>Enviar</button>
-            </div>
+            </form>
           </form>
         </div>
       </div>

@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .circleImgTools{
     border-radius: 50%;
@@ -22,13 +23,18 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: ease-in-out 1s;
 }
 
 .circleImgTools svg {
     font-size: 2rem;
     color: #e8541d;
 }
+ .circleImgTools:hover{
+    transform: rotate(720deg);
+    transition-duration: 1.5s;
+}
+
 
 .containerCard:hover .circleImgTools {
     background-color: #e8541d;

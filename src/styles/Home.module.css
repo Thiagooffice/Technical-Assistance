@@ -12,6 +12,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+
 .containerHeader{
   background-color: #2E2E2E;
   display: flex;
@@ -79,9 +80,12 @@
 }
 
 .logo{
-  width: 60px;
-  height: 20px;
-  background-color: purple;
+  margin-left: 20px;
+  width: 80px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navBar{
   background-color: #2E2E2E;
@@ -331,8 +335,8 @@
   width: 100%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+  transition: ease 0.5s;
 }
-
 .cardPlace:hover .topCardPlace {
   background: #222222;
 }
@@ -409,7 +413,11 @@
 .textInfoServices {
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 180px;
 }
 
 .textInfoServices h1 {
@@ -486,7 +494,7 @@
 
 .formContatoRight {
   background: #F9F9F9;
-  color: #e8541d;
+  color: #2E2E2E;
   width: 50%;
   height: 100%;
   border-top-right-radius: 20px;
@@ -501,7 +509,7 @@
 
 .field {
     font-family: 'Poppins', sans-serif;
-    color: #000;
+    color: #2E2E2E;
     border-radius: 8px;
     background: transparent;
     border: 1px solid #000;
@@ -513,10 +521,11 @@
 }
 
 .field::placeholder {
-  color: #000;
+  color: gray;
 }
 
 .textArea {
+  outline: none;
   display: flex;
   font-family: 'Poppins', sans-serif; 
   width: 400px;
@@ -527,10 +536,11 @@
   font-size: 1rem;
   padding-left: 1rem;
   padding-bottom: 4rem;
+  color: #2E2E2E;
 }
 
 .textArea::placeholder {
-  color: #000;
+  color: gray;
 }
 
 .buttonContato {
@@ -547,6 +557,16 @@
   font-size: 1.3rem;
   cursor: pointer;
   margin-bottom: 10px;
+  margin-top: 10px;
+  transition: ease 0.8s;
+}
+.buttonContato:hover{
+  background-color: transparent;
+  box-shadow: 0 0 10px 0 #e8541d inset, 0 0 15px 8px #e8541d;
+  color: #e8541d;
+}
+.buttonContato:active{
+  background-color:#e8531df3 ;
 }
 
 @media only screen and (max-width: 800px) {
@@ -606,7 +626,7 @@
   }
   .titleHome {
     color: #fff;
-    font-size: 1rem;
+    font-size: 2rem;
     margin-top: 3rem;
   }
 
@@ -670,7 +690,7 @@
 
   .titleHome {
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.8rem;
     margin-top: 3rem;
 }
 }
