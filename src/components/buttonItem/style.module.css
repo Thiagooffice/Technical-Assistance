@@ -72,18 +72,17 @@
     z-index: 1;
     font-size: 0.9rem;
     width: 90%;
+    margin-left: 40px;
 }
 
 .textDescriptionOff {
-    height: 0px;
-    opacity: 0;
-    margin-left: 500px;
     transition:  0.5s;
 }
 
 .textDescriptionOn {
     transition: 0.5s;
-    margin-left: 40px;
+    margin-left: 1000px;
+    height: 1px;
 }
 
 @media only screen and (max-width: 500px) {

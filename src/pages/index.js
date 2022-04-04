@@ -13,8 +13,11 @@ import face from '../assets/face.png'
 import Logo from '../assets/logo.png'
 
 import { IoIosArrowBack, IoIosArrowForward, IoIosPhonePortrait, IoMdMail, IoMdMap, IoIosMenu } from 'react-icons/io'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import { SiWhatsapp, SiFacebook, SiGmail, SiInstagram } from 'react-icons/si'
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 
 import React, { useRef, useState } from 'react';
 
@@ -22,26 +25,31 @@ export default function Home() {
 
   const [hamburguer, setHamburguer] = useState(false)
 
+  const feedbacks = useRef()
+
   const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
     desktop: {
-      breakpoint: { max: 2500, min: 1024 },
-      items: 3,
-      slidesToSlide: 3,
-      partialVisibilityGutter: 40,
+      breakpoint: { max: 3000, min: 1230 },
+      items: 4
+    },
+    minDesktop: {
+      breakpoint: { max: 1230, min: 1024 },
+      items: 3
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2,
+      breakpoint: { max: 1024, min: 650 },
+      items: 2
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
-
-  const feedbacks = useRef()
+      breakpoint: { max: 650, min: 0 },
+      items: 1
+    }
+  }
 
   function nextClick(event) {
     event.preventDefault();
@@ -68,7 +76,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.containerHeader}>
           <div className={styles.logo}>
-            <Image src={Logo} width={60} height={75} alt="Logo Image" />
+            <Image src={Logo} width={50} height={55} alt="Logo Image" />
           </div>
           <nav className={styles.navBar}>
             <ul className={styles.listaHeader}>
@@ -110,23 +118,7 @@ export default function Home() {
 
       <div className={styles.sectionCarousel}>
         <div className={styles.boxCarouselMain}>
-          <Carousel responsive={responsive}
-            partialVisible={true}
-            autoplay={true}
-            className="containerCarousel" >
-            <div>
-              <Image src={ImgIphones} alt="Image Iphones" />
-              <p className="legend">Iphones</p>
-            </div>
-            <div>
-              <Image src={ImgIphones} alt="Image MacBooks"/>
-              <p className="legend">MacBooks</p>
-            </div>
-            <div>
-              <Image src={ImgIphones} alt="Image Androids"/>
-              <p className="legend" id="serviços">Androids</p>
-            </div>
-          </Carousel>
+
         </div>
       </div >
 
@@ -199,7 +191,7 @@ export default function Home() {
             <DataItem numero="1002" subtitulo="Satisfação" />
             <DataItem numero="102" subtitulo="Xiaomi" />
             <DataItem numero="12" subtitulo="Android" />
-            <DataItem numero="22" subtitulo="Apple"/>
+            <DataItem numero="22" subtitulo="Apple" />
           </div>
         </div>
       </div>
@@ -282,22 +274,16 @@ export default function Home() {
       <div className={styles.feedBacks}>
         <h1 className={styles.titleOurServices}>Feedback dos nossos clientes.</h1>
         <div className={styles.lineOurServices}></div>
-        <div className={styles.showSlide}>
-          <div className={styles.feedBacksFlex}>
-            <Carousel responsive={responsive}
-              partialVisible={true}
-              autoplay={true}
-              className={styles.containerCarousel}
- >
-              <div className={styles.feedbacksSlide}>
-                <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-              </div>
-              <div className={styles.feedbacksSlide}>
-                <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
-              </div>
-            </Carousel>
-          </div>
-        </div>
+        <Carousel
+          responsive={responsive}
+        >
+          <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
+          <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
+          <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
+          <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
+          <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
+          <FeedBackClient texto="Levei meu iphone com botão home estragado, e foi substituído por um novo origial e por um preço bacana." nome="Pedro Ferraz" />
+        </Carousel>
       </div>
 
       <div className={styles.containerContato} id="contato">
@@ -318,17 +304,37 @@ export default function Home() {
               <Image src={emailOrange} height={140} />
               <input type="text" name="name" className={styles.field} placeholder="Nome" />
               <input type="email" name="email" className={styles.field} placeholder="Email" />
-              <input  
-              value={phone} 
-              name="number" 
-              className={styles.field} 
-              placeholder="Número" 
-              onChange={(e) => setPhone(maskPhone(e.target.value))}
+              <input
+                value={phone}
+                name="number"
+                className={styles.field}
+                placeholder="Número"
+                onChange={(e) => setPhone(maskPhone(e.target.value))}
               />
               <input type="textarea" name="serviço" className={styles.textArea} placeholder="Deixe uma mensagem..." />
               <button type="submit" className={styles.buttonContato}>Enviar</button>
             </form>
           </form>
+        </div>
+      </div>
+
+      <div className={styles.footer}>
+        <div className={styles.topFooter}>
+          <div className={styles.copyright}>
+            <p>Copyright © 2022 Assistência Técnica</p>
+            <div className={styles.socialMediaFooter}>
+              <a href=""><SiInstagram /></a>
+              <a href=""><SiGmail /></a>
+              <a href=""><SiFacebook /></a>
+              <a href=""><SiWhatsapp /></a>
+            </div>
+          </div>
+          <ul>
+            <a href=""><li>Fale conosco</li></a>
+            <a href=""><li>Acesse nosso instagram</li></a>
+            <a href=""><li>Nossos serviços</li></a>
+          </ul>
+          <p>Desenvolvido por <a href="https://www.linkedin.com/in/jguilhermesl/" target="_blank">@jgsldev</a> e <a href="https://www.linkedin.com/in/thiago-leal-de-souza-programador/" target="_blank">@thiagosouza</a></p>
         </div>
       </div>
     </>
