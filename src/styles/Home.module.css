@@ -391,16 +391,6 @@
   border-bottom:rgba(143, 140, 140, 0.35) solid 1px;
 }
 
-.feedBacksFlex {
-  width: 50vw;
-  margin: 0 auto;
-}
-
-
-.feedBacks {
-  margin-top: 1rem;
-}
-
 .containerInfoServices {
   height: 100%;
   background: #e8541d;
@@ -427,6 +417,10 @@
 
 .textInfoServices p {
   font-size: 1.5rem;
+}
+
+.feedBacks{
+  height: 400px;
 }
 
 .containerContato {
@@ -569,6 +563,42 @@
   background-color:#e8531df3 ;
 }
 
+.footer {
+  max-height: 20vh;
+  background: #2E2E2E;
+  color: #fff;
+}
+
+.topFooter {
+  padding-top: 1rem;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topFooter ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialMediaFooter {
+  padding-top: 1rem;
+  width: 15vw;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  gap: 10px;
+}
+
+.topFooter a:hover {
+  color: #E8541D;
+}
+.socialMediaFooter a:hover {
+  color: #E8541D;
+}
+
 @media only screen and (max-width: 800px) {
   .rightContainerButtonsItems {
     width: 80%;
@@ -675,7 +705,7 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 620px) {
   .textInformationRepairs h1 {
     font-size: 2rem;
     text-transform: uppercase;
@@ -690,7 +720,7 @@
 
   .titleHome {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-top: 3rem;
 }
 }
@@ -734,5 +764,29 @@
     flex-direction: column;
     gap: 1.5rem;
 
+  }
+}
+
+@media only screen and (max-width: 450px) { 
+  .titleHome {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) { 
+
+  .footer {
+    height: 100%;
+    max-height: 100%;
+  }
+  .topFooter {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .socialMediaFooter {
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
   }
 }

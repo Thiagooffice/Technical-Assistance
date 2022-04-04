@@ -13,6 +13,7 @@ export default function ButtonItem({ titulo, descricao }) {
         else {
             setDescription(false)
         }
+        console.log(description)
     }
 
     return (
