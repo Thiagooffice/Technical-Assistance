@@ -1,11 +1,10 @@
 .feedBackClient {
-    margin-top: 2rem;
     height: 220px;
     width: 300px;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
     flex: none;
-    margin-left: 10px;
+    margin: 3rem auto 0 auto;
 }
 
 .feedBackClient span {

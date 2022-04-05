@@ -13,11 +13,12 @@
 
 .showDescription {
     font-family: 'Poppins', sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    color: #fff;
     display: flex;
     height: 60px;
     max-width: 500px;
-    border: 1px solid rgb(212, 212, 212);
-    background: rgb(236, 235, 235);
+    background: #1B1B1B;
     align-items: center;
     border-radius: 100px;
     cursor: pointer;
@@ -68,21 +69,25 @@
 }
 
 .textDescription {
+    margin-top: 10px;
     font-weight: 800;
     z-index: 1;
     font-size: 0.9rem;
     width: 90%;
     margin-left: 40px;
-}
-
-.textDescriptionOff {
-    transition:  0.5s;
+    color: #fff;
+    height: 0px;
 }
 
 .textDescriptionOn {
+    height: 100%;
     transition: 0.5s;
-    margin-left: 1000px;
-    height: 1px;
+}
+
+.textDescriptionOff {
+    margin-left: 500px;
+    transition: 0.5s;
+    height: 0px;
 }
 
 @media only screen and (max-width: 500px) {
