@@ -1,5 +1,5 @@
 import styles from './style.module.css'
-import { BsTools } from 'react-icons/bs'
+import { BiWrench } from 'react-icons/bi'
 
 
 export default function CardServices({ titulo, descricao }) {
@@ -7,11 +7,9 @@ export default function CardServices({ titulo, descricao }) {
     return (
     <div className={styles.containerCard}>
         <div className={styles.imgToll}>
-            <div className={styles.circleImgTools}>
-                    <BsTools />
-            </div>
+                    <BiWrench />
         </div>
-        <div className={styles.titleDescrition}>
+        <div className={styles.titleDescription}>
              <h1>{titulo}</h1>
              <p>{descricao}</p>
         </div>

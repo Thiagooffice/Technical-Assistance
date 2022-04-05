@@ -11,8 +11,11 @@ import socialOrange from '../assets/socialOrange.svg'
 import emailOrange from '../assets/emailOrange.svg'
 import face from '../assets/face.png'
 import Logo from '../assets/logo.png'
+import Head from 'next/head';
+import { IoLogoWhatsapp } from 'react-icons/io'
+import Link from 'next/link'
 
-import { IoIosArrowBack, IoIosArrowForward, IoIosPhonePortrait, IoMdMail, IoMdMap, IoIosMenu } from 'react-icons/io'
+import { IoIosArrowBack, IoIosArrowForward, IoIosPhonePortrait, IoMdMail, IoMdMap, IoIosMenu, IoIosCheckmark } from 'react-icons/io'
 import { SiWhatsapp, SiFacebook, SiGmail, SiInstagram } from 'react-icons/si'
 
 import Carousel from 'react-multi-carousel';
@@ -42,8 +45,12 @@ export default function Home() {
       items: 3
     },
     tablet: {
-      breakpoint: { max: 1024, min: 650 },
-      items: 2
+      breakpoint: { max: 1024, min: 800 },
+      items: 3
+    },
+    tablet2: {
+      breakpoint: { max: 800, min: 650 },
+      items: 3
     },
     mobile: {
       breakpoint: { max: 650, min: 0 },
@@ -73,10 +80,24 @@ export default function Home() {
 
   return (
     <>
+      <Link href="#" passHref >
+        <div className={styles.iconeZap}>
+          <IoLogoWhatsapp color='#25D366' size={60} />
+        </div>
+      </Link>
+      <Head>
+        <title>Assistencia</title>
+      </Head>
+
+      <div className="progress">
+        <div className="progress_highlight" id="hightlight">
+        </div>
+      </div>
+
       <header className={styles.header}>
         <div className={styles.containerHeader}>
           <div className={styles.logo}>
-            <Image src={Logo} width={50} height={55} alt="Logo Image" />
+            <Image src={Logo} width={50} height={70} alt="Logo Image" />
           </div>
           <nav className={styles.navBar}>
             <ul className={styles.listaHeader}>
@@ -211,58 +232,50 @@ export default function Home() {
         <div className={styles.lineOurServices}></div>
         <div className={styles.boxPlacesDelivery}>
           <div className={styles.cardPlace}>
-            <div className={styles.topCardPlace}>
-              <div className={styles.leftTopCardPlace}>R$0</div>
-              <div className={styles.rightTopCardPlace}>
-                <h1>Bairros</h1>
-                <p>Região Circuvizinhas</p>
-              </div>
+            <div className={styles.lineTopCard}></div>
+            <div className={styles.titleAndPrice}>
+              <h1>Bairros de entrega</h1>
+              <span>R$ 0</span>
             </div>
-            <div className={styles.mainCardPlace}>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
+            <div className={styles.listBairros}>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
             </div>
           </div>
           <div className={styles.cardPlace}>
-            <div className={styles.topCardPlace}>
-              <div className={styles.leftTopCardPlace}>R$0</div>
-              <div className={styles.rightTopCardPlace}>
-                <h1>Bairros</h1>
-                <p>Região Circuvizinhas</p>
-              </div>
+            <div className={styles.lineTopCard}></div>
+            <div className={styles.titleAndPrice}>
+              <h1>Bairros de entrega</h1>
+              <span>R$ 0</span>
             </div>
-            <div className={styles.mainCardPlace}>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
+            <div className={styles.listBairros}>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
             </div>
           </div>
           <div className={styles.cardPlace}>
-            <div className={styles.topCardPlace}>
-              <div className={styles.leftTopCardPlace}>R$0</div>
-              <div className={styles.rightTopCardPlace}>
-                <h1>Bairros</h1>
-                <p>Região Circuvizinhas</p>
-              </div>
+            <div className={styles.lineTopCard}></div>
+            <div className={styles.titleAndPrice}>
+              <h1>Bairros de entrega</h1>
+              <span>R$ 0</span>
             </div>
-            <div className={styles.mainCardPlace}>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
-              <p>Pituba</p>
+            <div className={styles.listBairros}>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
+              <p><IoIosCheckmark /> Pituba</p>
             </div>
           </div>
         </div>
       </div>
+
 
       <div className={styles.containerInfoServices}>
         <div className={styles.textInfoServices}>
@@ -334,7 +347,6 @@ export default function Home() {
             <a href=""><li>Acesse nosso instagram</li></a>
             <a href=""><li>Nossos serviços</li></a>
           </ul>
-          <p>Desenvolvido por <a href="https://www.linkedin.com/in/jguilhermesl/" target="_blank">@jgsldev</a> e <a href="https://www.linkedin.com/in/thiago-leal-de-souza-programador/" target="_blank">@thiagosouza</a></p>
         </div>
       </div>
     </>
