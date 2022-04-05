@@ -2,8 +2,7 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import Monitor from '../assets/monitor.png'
 import CardServices from '../components/cardServices'
-import ImgCell from '../assets/imgCell.png'
-import ImgIphones from '../assets/iphones.jpg'
+import fotoQuestions from '../assets/fotoQuestions.svg'
 import ButtonItem from '../components/buttonItem'
 import DataItem from '../components/dataItem'
 import FeedBackClient from '../components/feedBackClient'
@@ -15,7 +14,7 @@ import Head from 'next/head';
 import { IoLogoWhatsapp } from 'react-icons/io'
 import Link from 'next/link'
 
-import { IoIosArrowBack, IoIosArrowForward, IoIosPhonePortrait, IoMdMail, IoMdMap, IoIosMenu, IoIosCheckmark } from 'react-icons/io'
+import {  IoIosHome, IoIosPhonePortrait, IoMdMail, IoMdMap, IoIosMenu, IoIosCheckmark, IoMdCall, IoMdHelp } from 'react-icons/io'
 import { SiWhatsapp, SiFacebook, SiGmail, SiInstagram } from 'react-icons/si'
 
 import Carousel from 'react-multi-carousel';
@@ -177,7 +176,7 @@ export default function Home() {
       <div className={styles.infoServices} id="duvidas">
 
         <div className={styles.leftContainerImgCell}>
-          <Image src={ImgCell} alt="Image Cell" />
+          <Image src={fotoQuestions} alt="Image Cell" width={450} />
         </div>
 
         <div className={styles.rightContainerButtonsItems}>

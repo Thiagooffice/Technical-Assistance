@@ -7,17 +7,11 @@ export default function ButtonItem({ titulo, descricao }) {
     const [description, setDescription] = useState(false)
 
     function showDescription() {
-        if (description === false) {
-            setDescription(true)
-        }
-        else {
-            setDescription(false)
-        }
-        console.log(description)
+        setDescription(!description)
     }
 
     return (
-        <div className={`${description ? styles.showNo : styles.showAll} `}>
+        <div className={`${description ? styles.showAll : styles.showNo} `}>
             <div className={styles.showDescription} onClick={showDescription}>
                 <div className={styles.boxIcon}>
                     <IoIosArrowDown />
