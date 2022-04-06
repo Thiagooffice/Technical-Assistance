@@ -195,6 +195,7 @@
   font-size: 36px;
   color: #fff;
   text-align: center;
+  margin-top: 40px;
 }
 
 .lineOurServices{
@@ -202,18 +203,17 @@
   height: 1px;
   background-color: #fff;
   opacity: 0.9;
-  margin: 0.5rem auto 0 auto;
+  margin: 2rem auto 2rem auto;
 }
 
 .allCards{
-  margin: 20px auto;
+  margin: 50px;
   width: 90%;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 2rem;
 }
 
 .infoServices{
@@ -225,11 +225,24 @@
   margin-bottom: 1rem;
 }
 
-.leftContainerImgCell{
-  height: 100%;
+.imagemMacBook2{
+  height: 481px;
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: float 5s infinite;
+  margin-bottom: 40px;
+}
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-30px)
+	}
+} 
+.efeito-flutuante .elementor-button-wrapper a, .efeito-flutuante .elementor-image img {
+     animation: float 6s ease-in-out infinite;
 }
 
 .rightContainerButtonsItems{
@@ -253,12 +266,16 @@
   width: 100vw;
   height: 100%!important;
   z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .boxImgWrapper {
   height: 100%;
   width: 100%;
-  background: url('../assets/infimg.jpg');
+  background: url('../assets/macBooks2.png');
   background-size: cover;
   opacity: 0.3;
 }
@@ -307,14 +324,16 @@
 }
 
 .boxPlacesDelivery {
-  width: 80vw;
-  margin: 0 auto;
+  width: 90vw;
+  height: 500px;
+  margin: 70px auto;
   justify-content: center;
   gap: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
+
 
 .cardPlace {
   color: #fff;
@@ -326,6 +345,12 @@
   border-bottom-right-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   margin-bottom: 2rem;
+  transition: all 1.1s;
+}
+.cardPlace:hover{
+  background: linear-gradient(23deg, rgba(248,132,22,1) 9%, rgba(50,61,225,0.7454024754213483) 52%, rgba(26,231,57,1) 90%);
+  margin-top: 1rem;
+  box-shadow: 0px 0px 15px #fff;
 }
 
 .cardPlace:nth-child(2) {
@@ -615,6 +640,14 @@
 .iconeZap:hover{
   width: 60px;
 }
+
+.containerIframe{
+  height: 70vh;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
 @keyframes animationZap {
   0% {
     transform: rotate(0deg);

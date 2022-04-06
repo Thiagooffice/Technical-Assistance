@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import Monitor from '../assets/monitor.png'
 import CardServices from '../components/cardServices'
-import fotoQuestions from '../assets/fotoQuestions.svg'
+import macBooks2 from '../assets/macBooks2.png'
 import ButtonItem from '../components/buttonItem'
 import DataItem from '../components/dataItem'
 import FeedBackClient from '../components/feedBackClient'
@@ -131,7 +131,7 @@ export default function Home() {
         <div className={styles.flexHome}>
           <div className={styles.titleHome}>
             <h1>Solução Completa</h1>
-            <h3>iPhone, iPad, iMac e Macbook</h3>
+            <h3>MacBook, iMac, Notebook, placas gamer</h3>
           </div>
         </div>
       </div>
@@ -146,28 +146,28 @@ export default function Home() {
         <h1 className={styles.titleOurServices}>Nossos principais serviços</h1>
         <div className={styles.lineOurServices}></div>
         <div className={styles.allCards}>
-          <CardServices titulo="Troca de Touch"
+          <CardServices titulo="Troca de tela em até 30 min."
             descricao="Seu smartphone caiu e rachou a tela? Trocamos em 40min, sempre com peças originais."
           />
           <CardServices
-            titulo="Troca de Bateria"
+            titulo="Troca de teclado"
             descricao="Sua bateria não dura mais o dia inteiro, ou não carrega mais? É hora de substituir. Temos o melhor preço."
           />
           <CardServices
-            titulo="Troca Botão Home
+            titulo="Upgrade
             "
             descricao="Seu botão não corresponde mais aos comandos? está desgastados? Troca em 15min com preço justo, é na Play Consert."
           />
           <CardServices
-            titulo="Troca Botão Power"
+            titulo="Instalação de SSD/M2"
             descricao="Parece que desligar o seu smartphone está sendo a pior tarefa? Nós trocamos para você! lembre-se as peças são sempre originais."
           />
           <CardServices
-            titulo="Reparo Especializado iPad, iPod"
+            titulo="Especialistas no reparo de Logic Boards Apple"
             descricao="Troca de touch Screen de iPad/iPod todas as gerações de forma rápida e bem feita. Entrega em tempo record."
           />
           <CardServices
-            titulo="Backups de seu Smartphone"
+            titulo="Autorizada condenou? Nós reparamos!"
             descricao="Precisa fazer backup? Deixe que tomamos todas as precauções para salvar seus dados de forma rápida e segura."
           />
         </div>
@@ -175,8 +175,8 @@ export default function Home() {
 
       <div className={styles.infoServices} id="duvidas">
 
-        <div className={styles.leftContainerImgCell}>
-          <Image src={fotoQuestions} alt="Image Cell" width={450} />
+        <div className={styles.imagemMacBook2}>
+          <Image src={macBooks2} alt="Foto macBook2" />
         </div>
 
         <div className={styles.rightContainerButtonsItems}>
@@ -187,7 +187,7 @@ export default function Home() {
             <ButtonItem titulo="Quanto tempo tenho de garantia?"
               descricao="A garantia para todo reparo realizado conosco é de 90 dias, no entando, não precisa se preocupar com problemas ocorridos após o fim da garantia, pois temos um relacionamento amigável e sempre resolvemos tudo da melhor maneira possível."
             />
-            <ButtonItem titulo="A play consert é segura?"
+            <ButtonItem titulo="A Vap Computadores é segura?"
               descricao="Sim! completamente segura. Temos profissionais altamente qualificados e certificados em umas das melhores escolas de software e hardware autorizada da apple. Desta forma sempre procedemos com diagnósticos precisos e corretos."
             />
             <ButtonItem titulo="Vocês coletam e entram?"
@@ -205,13 +205,13 @@ export default function Home() {
           <div className={styles.boxImgWrapper}></div>
         </div>
         <div className={styles.textInformationRepairs}>
-          <h1>São muitos anos em reparos de smartphone</h1>
+          <h1>São muitos anos em reparos de notbooks</h1>
           <h2>Venha conhecer nossa loja e surpreenda-se com nossos serviços.</h2>
           <div className={styles.datasInformation} id="redes">
             <DataItem numero="1002" subtitulo="Satisfação" />
-            <DataItem numero="102" subtitulo="Xiaomi" />
-            <DataItem numero="12" subtitulo="Android" />
-            <DataItem numero="22" subtitulo="Apple" />
+            <DataItem numero="350" subtitulo="Samsung" />
+            <DataItem numero="157" subtitulo="LG" />
+            <DataItem numero="134" subtitulo="Apple" />
           </div>
         </div>
       </div>
@@ -219,11 +219,11 @@ export default function Home() {
       <div className={styles.socialMedia}>
         <h1 className={styles.titleOurServices}>Redes Sociais</h1>
         <div className={styles.lineOurServices}></div>
-        <a href="http://www.facebook.com">
+        <Link href="http://www.facebook.com">
           <div className={styles.boxSocialMedia} >
-            <Image src={face} alt="Foto Face" width={1000} />
+            <Image src={face} alt="Foto Face"/>
           </div>
-        </a>
+        </Link>
       </div>
 
       <div className={styles.placesDelivery} id="coleta">
@@ -330,6 +330,10 @@ export default function Home() {
         </div>
       </div>
 
+      <div className={styles.containerIframe}>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.661706304236!2d-38.48725188560326!3d-12.993475963768462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71604b334dc8727%3A0x725c4888cdc441c2!2sR.%20Waldemar%20Falc%C3%A3o%2C%20277%20-%20Candeal%2C%20Salvador%20-%20BA%2C%2040296-700!5e0!3m2!1spt-BR!2sbr!4v1649208296144!5m2!1spt-BR!2sbr" width={1200} height={433}></iframe>
+      </div>
+
       <div className={styles.footer}>
         <div className={styles.topFooter}>
           <div className={styles.copyright}>
@@ -348,6 +352,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
+
     </>
   )
 }
