@@ -219,6 +219,7 @@
 .infoServices{
   width: 90%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-around;
@@ -245,12 +246,6 @@
      animation: float 6s ease-in-out infinite;
 }
 
-.rightContainerButtonsItems{
-    width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .containerButtonsServices{
   width: 100%;
   display: flex;
@@ -259,6 +254,13 @@
   
 }
 
+.rightContainerButtonsItems{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
 .containerInformationRepairs {
   display: flex;
   justify-content: center;
@@ -325,8 +327,8 @@
 
 .boxPlacesDelivery {
   width: 90vw;
-  height: 500px;
-  margin: 70px auto;
+  height: 100%;
+  margin: 10px auto;
   justify-content: center;
   gap: 2rem;
   display: flex;
@@ -435,7 +437,8 @@
 }
 
 .feedBacks{
-  height: 400px;
+  height: 100%;
+  margin-bottom: 2rem;
 }
 
 .containerContato {
