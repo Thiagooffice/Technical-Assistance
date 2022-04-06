@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </Link>
       <Head>
-        <title>Assistencia</title>
+        <title>Vap Computadores</title>
       </Head>
 
       <div className="progress">
@@ -130,8 +130,8 @@ export default function Home() {
         <div className={styles.opacityBackground}></div>
         <div className={styles.flexHome}>
           <div className={styles.titleHome}>
-            <h1>Solução Completa</h1>
-            <h3>MacBook, iMac, Notebook, placas gamer</h3>
+            <h1>Vap Computadores</h1>
+            <h3>MacBook, iMac, Notebook e Placas gamers.</h3>
           </div>
         </div>
       </div>
@@ -176,7 +176,7 @@ export default function Home() {
       <div className={styles.infoServices} id="duvidas">
 
         <div className={styles.imagemMacBook2}>
-          <Image src={macBooks2} alt="Foto macBook2" />
+          <Image src={macBooks2} alt="Foto macBook2" width={500} height={350} />
         </div>
 
         <div className={styles.rightContainerButtonsItems}>
