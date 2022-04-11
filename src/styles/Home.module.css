@@ -264,7 +264,8 @@
 .containerInformationRepairs {
   display: flex;
   justify-content: center;
-  background: #E8541D;
+  background-image: url('../assets/homeImage.jpg');
+  background-size: cover;
   width: 100vw;
   height: 100%!important;
   z-index: 10;
@@ -284,26 +285,28 @@
 
 .textInformationRepairs {
   max-width: 90vw;
-  color: #fff;
+  color: #ff4400;
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   text-align: center;
   top: 4rem;
   margin: 0 auto;
+  
 }
 
 .textInformationRepairs h1 {
   margin-top: 1rem;
-  font-size: 2.8rem;
+  font-size: 3rem;
   text-transform: uppercase;
-
+  text-shadow: 0px 0px 10px white;
 }
 
 .textInformationRepairs h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-top: 1rem;
+  text-shadow: 0px 0px 5px white;
 }
 
 .datasInformation { 
@@ -321,19 +324,28 @@
   cursor: pointer;
 }
 
+.containerImagem3Mac{
+  height: 45vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .placesDelivery {
   height: 100%;
 }
 
 .boxPlacesDelivery {
   width: 90vw;
-  height: 100%;
+  height: 500px;
   margin: 10px auto;
   justify-content: center;
   gap: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 65px;
 }
 
 
@@ -409,8 +421,9 @@
 }
 
 .containerInfoServices {
-  height: 100%;
-  background: #e8541d;
+  height:300px;
+  width: 100vw;
+  background-color: #131313;
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
@@ -419,21 +432,27 @@
 
 .textInfoServices {
   font-family: 'Poppins', sans-serif;
-  color: #fff;
+  color: #ff4400;
+  text-shadow: 0px 0px 10px #fff;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 180px;
+  height: 100%;
+  width: 100vw;
+  background-image: url('../assets/conserto-macbook-pro-air\ \(1\).png');
+  background-size: cover;
 }
 
+
 .textInfoServices h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
 }
 
 .textInfoServices p {
-  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 
 .feedBacks{
@@ -691,6 +710,17 @@
   .textInfoServices p {
     font-size: 1.5rem;
   }
+    .textInfoServices{
+      background-image: none;
+      text-shadow: none;
+    }
+    .containerIframe{
+      margin-bottom: 0px;
+      height: 44vh;
+    }
+    .containerInfoServices{
+      height: 189px;
+    }
 }
 
 
@@ -771,8 +801,15 @@
     border-bottom-right-radius: 10px;
     border-top-right-radius: 0px;
   }
-  
-
+  .boxPlacesDelivery{
+    height:1192px;
+    margin-bottom: 0px;
+  }
+  .cardPlace{
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 17px;
+  }
 }
 
 @media only screen and (max-width: 620px) {

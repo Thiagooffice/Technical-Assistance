@@ -10,6 +10,7 @@ import socialOrange from '../assets/socialOrange.svg'
 import emailOrange from '../assets/emailOrange.svg'
 import face from '../assets/face.png'
 import Logo from '../assets/logo.png'
+import Image3Mac from '../assets/3Macs.png'
 import Head from 'next/head';
 import { IoLogoWhatsapp } from 'react-icons/io'
 import Link from 'next/link'
@@ -143,7 +144,7 @@ export default function Home() {
       </div >
 
       <div className={styles.ourServices} id="serviços">
-        <h1 className={styles.titleOurServices}>Nossos principais serviços</h1>
+        <h1 className={styles.titleOurServices}>Serviços</h1>
         <div className={styles.lineOurServices}></div>
         <div className={styles.allCards}>
           <CardServices titulo="Troca de tela em até 30 min."
@@ -226,6 +227,10 @@ export default function Home() {
         </Link>
       </div>
 
+      <div className={styles.containerImagem3Mac}>
+        <Image quality={100} width={800} height={400} src={Image3Mac} />
+      </div>
+
       <div className={styles.placesDelivery} id="coleta">
         <h1 className={styles.titleOurServices}>Coletamos e entregamos o seu iPhone</h1>
         <div className={styles.lineOurServices}></div>
@@ -304,7 +309,7 @@ export default function Home() {
             <div className={styles.formContatoLeft}>
               <h1>CONTATE-NOS</h1>
               <div className={styles.fotoContateNos}>
-                <Image src={socialOrange} height={160} alt="Social Image" />
+                <Image src={socialOrange} height={160} alt="Social Image"/>
               </div>
               <div className={styles.boxTextsFormContatoLeft}>
                 <p><IoIosPhonePortrait />  +55 71 34933508 </p>
@@ -313,7 +318,7 @@ export default function Home() {
               </div>
             </div>
             <form className={styles.formContatoRight}>
-              <Image src={emailOrange} height={140} />
+              <Image alt='Email Image' src={emailOrange} height={140} />
               <input type="text" name="name" className={styles.field} placeholder="Nome" />
               <input type="email" name="email" className={styles.field} placeholder="Email" />
               <input
