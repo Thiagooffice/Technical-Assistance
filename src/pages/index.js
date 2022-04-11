@@ -312,9 +312,9 @@ export default function Home() {
                 <Image src={socialOrange} height={160} alt="Social Image"/>
               </div>
               <div className={styles.boxTextsFormContatoLeft}>
-                <p><IoIosPhonePortrait />  +55 71 34933508 </p>
-                <p><IoMdMail />  contato@playconsert.com.br </p>
-                <p><IoMdMap />  Rua Leonor Calmon, 256 - Candeal, Salvador - BA, Centro Médico Christian Barnard, Loja 29 </p>
+                <p><IoIosPhonePortrait />  +55 6465464645 </p>
+                <p><IoMdMail />  contato@email.com.br </p>
+                <p><IoMdMap />  Rua Waldemar Falcão, 227 - Shopp Horto Center, Loja 21 - Candeal, Salvador, BA, 40296-700, Brasil. (Próx. Ao Colégio Luiz Vianna) </p>
               </div>
             </div>
             <form className={styles.formContatoRight}>
