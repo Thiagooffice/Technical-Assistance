@@ -12,7 +12,7 @@ Link: Em breve...
 
 ### 🔧 Ajustes e alterações
 
-✔️ O projeto foi finalziado.
+✔️ O projeto foi finalizado.
 
 - [x] Corpo do site com HTML;
 - [x] Estilização com CSS;
