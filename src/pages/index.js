@@ -80,14 +80,15 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Vap Computadores</title>
+        
+      </Head>
       <Link href="#" passHref >
         <div className={styles.iconeZap}>
           <IoLogoWhatsapp color='#25D366' size={60} />
         </div>
       </Link>
-      <Head>
-        <title>Vap Computadores</title>
-      </Head>
 
       <div className="progress">
         <div className="progress_highlight" id="hightlight">
