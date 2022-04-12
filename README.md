@@ -74,7 +74,7 @@ Depois de iniciar :checkered_flag:, você precisa ter o  [Git](https://git-scm.c
 # Clonar o projeto
 $ git clone https://github.com/jguilhermesl/Consert-Notbook/commits?author=Thiagooffice
 # Acesse
-$ cd consert-notbook
+$ cd technical-assistance
 # Instalar dependências
 $ yarn or npm 
 # Rodar o projeto
