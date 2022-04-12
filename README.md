@@ -25,7 +25,7 @@ Link: Em breve...
 ### 🎮 Como projeto trabalha
 
 O projeto consiste numa Landing page para uma assistência técnica. 
-O projeto foi desenvolvido com <i>React</i>.
+O projeto foi desenvolvido com <i>NextJS</i>.
 
 ## 👨‍💻 Tecnologias
 Tecnologias e libs utilizadas no projeto:
@@ -33,7 +33,7 @@ Tecnologias e libs utilizadas no projeto:
     <li>HTML</li>
     <li>CSS</li>
     <li>JavaScript</li>
-    <li>ReactJS</li>
+    <li>NextJS</li>
     <li>Undraw Illustrations</li>
     <li>LocalStorage</li>
     <li>React Hooks</li>
@@ -74,7 +74,7 @@ Depois de iniciar :checkered_flag:, você precisa ter o  [Git](https://git-scm.c
 # Clonar o projeto
 $ git clone https://github.com/jguilhermesl/Consert-Notbook/commits?author=Thiagooffice
 # Acesse
-$ cd consert-notbook
+$ cd technical-assistance
 # Instalar dependências
 $ yarn or npm 
 # Rodar o projeto
