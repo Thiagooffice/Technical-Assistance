@@ -11,7 +11,7 @@ export default function FeedBackClient({ texto, nome }) {
                 <div className={styles.fotoClient}></div>
             </div>
             <div className={styles.topFeedBack}>
-                <p><span>''</span> {texto} <span>''</span></p>
+                <p>{texto}</p>
             </div>
             
         </div>
