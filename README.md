@@ -8,7 +8,7 @@
 
 ### :rocket: Aplication link
 
-Link: Em breve...
+Link: https://technicalassistance.netlify.app
 
 ### 🔧 Ajustes e alterações
 
